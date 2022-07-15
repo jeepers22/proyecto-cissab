@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/style.css">
+        <title>CISSAB</title>
+    </head>
+    <body>
+        <header>
+            <!-- Logo linkeable -->
+            <a class="logo" href="index.html"><img class="logoImagen" src="./img/Logo CISSAB.png" alt="Logo Cissab"></a>
+            <!-- Barra de navegación -->
+            <nav>
+                <ul>
+                    <li>
+                        <a href="index.html">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="./secciones/cultura.html">Cultura</a>
+                    </li>
+                    <li>
+                        <a href="./secciones/juventud.html">Jueventud</a>
+                    </li>
+                    <li  class="deportesNav">
+                        <a href="./secciones/deportes.html">Deportes</a>
+                    </li>
+                    <li>
+                        <a href="./secciones/contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- TODO: seguir probando propiedades de la Wave -->
+            <!-- <div class="headerWave" style="height: 100px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M-1.41,74.52 C145.87,-149.48 134.59,297.55 501.41,68.59 L500.00,150.00 L-17.77,160.38 Z" style="stroke: none; fill: #fff;"></path></svg></div> -->
+        </header>
+        <!-- General Grid -->
+        <div class="home-general-grid">
+            <div class="welcome-title">
+                <h1>Bienvenido a CISSAB!</h1>
+                <h2>Vení a conocernos</h2>
+            </div>
+            <!-- TODO: Sección de Galería Slider con movimiento automático -->
+            <div class="img-slider-container">
+                <!-- TODO: Visor tipo iphone, ver como fijar imagen de cel con slider -->
+                <!-- <img class="iphone" src="./img/iphone2.png" alt="Iphone"> -->
+                <picture>
+                    <source media="(min-width: 1200px)" srcset="img/dep-tenis-700x350.jpg">
+                    <source media="(min-width: 768px)" srcset="img/dep-tenis-500x250.jpg">
+                    <img src="./img/dep-tenis-350x175.jpg" alt="Tenis CISSAB">
+                </picture>
+                <div class="camera-cellphone"></div>
+            </div>
+            <main>
+                <!-- Sección CARDS de Noticias Actuales -->
+                <section>
+                    <div class="next-events-grid">
+                        <h2>ÚLTIMAS NOVEDADES</h2>
+                        <!-- Noticia Ayuda Solidaria -->
+                        <div class="card-container card-container-1">
+                            <div class="card-img">
+                                <picture>
+                                    <source media="(min-width: 1200px)" srcset="img/solid-400.jpg">
+                                    <source media="(min-width: 768px)" srcset="img/solid-350.jpg">
+                                    <img src="./img/solid-350.jpg" alt="Donaciones">
+                                </picture>
+                            </div>
+                            <div class="card-info">
+                                <h3>COMPROMISO SOCIAL</h3>
+                                <h4>AYUDANOS A AYUDAR</h4>
+                                <p>Ya no sabes dónde meter tantas cosas? Liberate de todo eso que ya no usas! Tu aporte puede ser de gran ayuda para los más necesitados</p>
+                            </div>
+                        </div>
+                        <!-- Noticia Juventud -->
+                        <div class="card-container card-container-2">
+                            <div class="card-img">
+                                <picture>
+                                    <source media="(min-width: 1200px)" srcset="img/juv-maja-400.jpg">
+                                    <source media="(min-width: 768px)" srcset="img/juv-maja-350.jpg">
+                                    <img src="./img/juv-maja-350.jpg" alt="Majanitos">
+                                </picture>
+                            </div>
+                            <div class="card-info">
+                                <h3>JUVENTUD</h3>
+                                <h4>IMPERDIBLE!!</h4>
+                                <p>Llegaron los Majanitos y las Trasnochadas de Juventud. Esperamos a todos sus hijos para compartir uno de los momentos más lindos y divertidos del año</p>
+                            </div>
+                        </div>
+                        <!-- Noticia Deportes -->
+                        <div class="card-container card-container-3">
+                            <div class="card-img">
+                                <picture>
+                                    <source media="(min-width: 1200px)" srcset="img/dep-aero-400.jpg">
+                                    <source media="(min-width: 768px)" srcset="img/dep-aero-350.jpg">
+                                    <img src="./img/dep-aero-350.jpg" alt="AeroCombat">
+                                </picture>
+                            </div>
+                            <div class="card-info">
+                                <h3>DEPORTES</h3>
+                                <h4>LO ESTABAS ESPERANDO</h4>
+                                <p>Ponete a punto para el próximo verano. Preparate para dar el 100% y transpirar la camiseta</p>
+                            </div>
+                        </div>
+                        <!-- Noticia Cultura -->
+                        <div class="card-container card-container-4">
+                            <div class="card-img">
+                                <picture>
+                                    <source media="(min-width: 1200px)" srcset="img/cult-standup-400.jpg">
+                                    <source media="(min-width: 768px)" srcset="img/cult-standup-350.jpg">
+                                    <img src="./img/cult-standup-350.jpg" alt="StandUp">
+                                </picture>
+                            </div>
+                            <div class="card-info">
+                                <h3>CULTURA</h3>
+                                <h4>MES DE LOS PAPIS - REÍTE DE VOS!</h4>
+                                <p>Porque los queremos mucho y se lo merecen... Show de Stand Up ¡Sólo para ellos!</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+        <footer>
+            <div class="footer-container">
+                <div class="footer-info">
+                    <p>Blas Parera 1301, B1806BWY</p>
+                    <p>Tristán Suárez, Buenos Aires</p>
+                    <p>Telefono:4234-8416</p>
+                </div>
+                <div class="footer-redes-sociales">
+                    <a href="https://www.facebook.com/clubcissab/" target="_blank"><img src="./img/icons8-facebook-nuevo.svg" alt="Facebook"></a>
+                    <a href="https://www.instagram.com/clubcissab/?hl=es" target="_blank"><img src="./img/icons8-instagram.svg" alt="Instagram"></a>
+                    <!-- Va a redirigir al whatsapp del club -->
+                    <a href="#" target="_blank"><img src="./img/icons8-whatsapp.svg" alt="Whatsapp"></a>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

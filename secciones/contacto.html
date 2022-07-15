@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/style.css">
+        <title>CISSAB</title>
+    </head>
+    <body>
+        <header>
+            <!-- Logo linkeable -->
+            <a class="logo" href="../index.html"><img class="logoImagen" src="../img/Logo CISSAB.png" alt="Logo Cissab"></a>
+            <!-- Barra de navegación -->
+            <nav>
+                <ul>
+                    <li>
+                        <a href="../index.html">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="cultura.html">Cultura</a>
+                    </li>
+                    <li>
+                        <a href="juventud.html">Jueventud</a>
+                    </li>
+                    <li  class="deportesNav">
+                        <a href="deportes.html">Deportes</a>
+                    </li>
+                    <li>
+                        <a href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="section-title">
+            <h1>CONTACTO</h1>
+            <p>Dejanos tus datos y te contactamos a la brevedad</p>
+        </div>
+        <main>
+            <section>
+                <div class="section-container">
+                    <div class="form-container">
+                        <form>
+                            <div class="form-info">
+                                <label for="nombre">Nombre y Apellido</label>
+                                <input class="form-info-stretch" type="text" name="nombre">
+                            </div>
+                            <div class="form-info">
+                                <label for="edad">Edad</label>
+                                <input class="form-info-stretch" type="number" name="edad">
+                            </div>
+                            <div class="form-info">
+                                <!-- Utilizamos menú desplegable para el género -->
+                                <label for="sexo">Género</label>
+                                <select class="form-info-stretch" name="sexo" id="">
+                                    <option value="hombre">Hombre</option>
+                                    <option value="mujer">Mujer</option>
+                                    <option value="otros">Otros</option>
+                                </select>
+                            </div><br>
+                            <div class="form-info">
+                                <label for="mail">E-mail</label>
+                                <input class="form-info-stretch" type="email" placeholder="ejemplo@dominio.com" name="mail">
+                            </div>
+                            <div class="form-info">
+                                <label for="telefono">Tel</label>
+                                <input class="form-info-stretch" type="number" name="telefono">
+                            </div>
+                            <div class="form-info-heigh-stretch">
+                                <label for="newsletter">Desea recibir el newsletter?</label>
+                                <input type="checkbox" name="newsletter" value="aceptaNewsletter" checked>
+                            </div>
+                            <div class="form-info">
+                                <label for="Observaciones">Observaciones</label>
+                                <textarea class="form-info-stretch"></textarea>
+                            </div>
+                            <div class="form-buttons">
+                                <input type="submit" value="Enviar">
+                                <input class="none-display" type="reset" value="Borrar campos">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="footer-container">
+                <div class="footer-info">
+                    <p>Blas Parera 1301, B1806BWY</p>
+                    <p>Tristán Suárez, Buenos Aires</p>
+                    <p>Telefono:4234-8416</p>
+                </div>
+                <div class="footer-redes-sociales">
+                    <a href="https://www.facebook.com/clubcissab/" target="_blank"><img src="../img/icons8-facebook-nuevo.svg" alt="Facebook"></a>
+                    <a href="https://www.instagram.com/clubcissab/?hl=es" target="_blank"><img src="../img/icons8-instagram.svg" alt="Instagram"></a>
+                    <!-- Va a redirigir al whatsapp del club -->
+                    <a href="#" target="_blank"><img src="../img/icons8-whatsapp.svg" alt="Whatsapp"></a>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
