@@ -43,7 +43,7 @@ a {
 /* __________________ Header/Nav __________________ */
 
 header {
-    background-color: var(--grey-color);
+    background-color: yellowgreen;
     display: flex;
     flex-direction: column;
     text-align: center;
