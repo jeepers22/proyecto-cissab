@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">  <!-- CDN michalsnik Animations -->
         <link rel="stylesheet" href="./css/style.css">
         <title>CISSAB</title>
     </head>
@@ -37,8 +38,10 @@
         <!-- General Grid -->
         <div class="home-general-grid">
             <div class="welcome-title">
-                <h1>Bienvenido a CISSAB!</h1>
-                <h2>Vení a conocernos</h2>
+                <h1 class="tracking-in-contract">Bienvenido a CISSAB!</h1>
+                <div class="sub-title">
+                    <h2 class="text-focus-in">Vení a conocernos</h2>
+                </div>
             </div>
             <!-- TODO: Sección de Galería Slider con movimiento automático -->
             <div class="img-slider-container">
@@ -58,14 +61,14 @@
                         <h2>ÚLTIMAS NOVEDADES</h2>
                         <!-- Noticia Ayuda Solidaria -->
                         <div class="card-container card-container-1">
-                            <div class="card-img">
+                            <div class="card-img" data-aos="fade-up" data-aos-easing="ease">
                                 <picture>
                                     <source media="(min-width: 1200px)" srcset="img/solid-400.jpg">
                                     <source media="(min-width: 768px)" srcset="img/solid-350.jpg">
                                     <img src="./img/solid-350.jpg" alt="Donaciones">
                                 </picture>
                             </div>
-                            <div class="card-info">
+                            <div class="card-info" data-aos="fade-left">
                                 <h3>COMPROMISO SOCIAL</h3>
                                 <h4>AYUDANOS A AYUDAR</h4>
                                 <p>Ya no sabes dónde meter tantas cosas? Liberate de todo eso que ya no usas! Tu aporte puede ser de gran ayuda para los más necesitados</p>
@@ -73,14 +76,14 @@
                         </div>
                         <!-- Noticia Juventud -->
                         <div class="card-container card-container-2">
-                            <div class="card-img">
+                            <div class="card-img" data-aos="fade-up">
                                 <picture>
                                     <source media="(min-width: 1200px)" srcset="img/juv-maja-400.jpg">
                                     <source media="(min-width: 768px)" srcset="img/juv-maja-350.jpg">
                                     <img src="./img/juv-maja-350.jpg" alt="Majanitos">
                                 </picture>
                             </div>
-                            <div class="card-info">
+                            <div class="card-info"  data-aos="fade-right">
                                 <h3>JUVENTUD</h3>
                                 <h4>IMPERDIBLE!!</h4>
                                 <p>Llegaron los Majanitos y las Trasnochadas de Juventud. Esperamos a todos sus hijos para compartir uno de los momentos más lindos y divertidos del año</p>
@@ -88,14 +91,14 @@
                         </div>
                         <!-- Noticia Deportes -->
                         <div class="card-container card-container-3">
-                            <div class="card-img">
+                            <div class="card-img" data-aos="fade-up">
                                 <picture>
                                     <source media="(min-width: 1200px)" srcset="img/dep-aero-400.jpg">
                                     <source media="(min-width: 768px)" srcset="img/dep-aero-350.jpg">
                                     <img src="./img/dep-aero-350.jpg" alt="AeroCombat">
                                 </picture>
                             </div>
-                            <div class="card-info">
+                            <div class="card-info"  data-aos="fade-left">
                                 <h3>DEPORTES</h3>
                                 <h4>LO ESTABAS ESPERANDO</h4>
                                 <p>Ponete a punto para el próximo verano. Preparate para dar el 100% y transpirar la camiseta</p>
@@ -103,14 +106,14 @@
                         </div>
                         <!-- Noticia Cultura -->
                         <div class="card-container card-container-4">
-                            <div class="card-img">
+                            <div class="card-img" data-aos="fade-up">
                                 <picture>
                                     <source media="(min-width: 1200px)" srcset="img/cult-standup-400.jpg">
                                     <source media="(min-width: 768px)" srcset="img/cult-standup-350.jpg">
                                     <img src="./img/cult-standup-350.jpg" alt="StandUp">
                                 </picture>
                             </div>
-                            <div class="card-info">
+                            <div class="card-info"  data-aos="fade-right">
                                 <h3>CULTURA</h3>
                                 <h4>MES DE LOS PAPIS - REÍTE DE VOS!</h4>
                                 <p>Porque los queremos mucho y se lo merecen... Show de Stand Up ¡Sólo para ellos!</p>
@@ -135,5 +138,14 @@
                 </div>
             </div>
         </footer>
+        <!-- CDN michalsnik Animations -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                // Seteamos atributos comunes a todas las animaciones de AOS
+                once: true,
+                duration: 1500
+            });
+        </script>
     </body>
 </html>

@@ -80,6 +80,12 @@ nav ul li a {
     font-size: 1rem;
 }
 
+nav ul li:hover {
+    background-color: var(--secondary-color);
+}
+
+
+
 /* __________________ Footer __________________ */
 
 footer {
@@ -141,13 +147,84 @@ footer {
     margin-bottom: 5px;
 }
 
-.welcome-title h2 {
+/* ______________________________________________________________________________ */
+/** Welcome Title Animation (Animista) **/
+
+/* h1 */
+.tracking-in-contract {
+	-webkit-animation: tracking-in-contract 1.3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	animation: tracking-in-contract 1.3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+@-webkit-keyframes tracking-in-contract {
+    0% {
+      letter-spacing: 1em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      letter-spacing: normal;
+      opacity: 1;
+    }
+}
+@keyframes tracking-in-contract {
+    0% {
+      letter-spacing: 1em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      letter-spacing: normal;
+      opacity: 1;
+    }
+}
+
+/* h2 */
+.text-focus-in {
+	-webkit-animation: text-focus-in 0.7s cubic-bezier(0.550, 0.085, 0.680, 0.530) .3s both;
+    animation: text-focus-in 0.7s cubic-bezier(0.550, 0.085, 0.680, 0.530) .3s both;
+}
+
+@-webkit-keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+}
+@keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+}
+/* ______________________________________________________________________________ */
+
+.welcome-title .sub-title {
     background-color: var(--secondary-color);
     width: 100%;
+    padding: 1px;
+}
+
+.welcome-title h2 {
     color: white;
     font-size: 1.2rem;
     font-weight: normal;
-    padding: 1px;
 }
 
 main {
@@ -180,6 +257,10 @@ main {
 
 .img-slider-container {
     position: relative;
+    box-shadow: 8px 7px 2px rgba(0,0, 0, .3);
+    border: 6px solid rgb(38, 38, 38);
+    border-radius: 6%;
+    overflow: hidden;
 }
 
 .img-slider-container picture {
@@ -187,9 +268,7 @@ main {
 }
 
 .img-slider-container picture img {
-    box-shadow: 8px 7px 2px rgba(0,0, 0, .3);
-    border: 6px solid rgb(38, 38, 38);
-    border-radius: 6%;
+    height: 100%;
 }
 
 /* Simularción de cámara frontal de celular para darle estética al slider */
@@ -454,6 +533,13 @@ main {
     font-size: .9rem;
     height: 8vh;
     color: white;
+    transition: all .2s linear;
+}
+
+/** Efecto Profundidad al pasar cursor**/
+.juv-escalon:hover {
+    transform: scale(1.1);
+    box-shadow: 2px 2px 10px rgba(0,0, 0, .3);
 }
 
 .juv-escalon-1 {
