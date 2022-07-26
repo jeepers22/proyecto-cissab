@@ -40,28 +40,68 @@ a {
     cursor: pointer
 }
 
-/* __________________ Header/Nav __________________ */
+/* **__________________ Header/Nav Con Bootstrap__________________** */
 
 header {
+    margin-bottom: 40px;
+}
+
+.logo {
+    margin-left: 10%;
+}
+
+.nav-button {
+    margin-right: 10%;
+}
+
+header nav {
+    background-color: var(--grey-color);
+}
+
+nav div div {
+    background-color: var(--primary-color);
+}
+
+.barra-superior-nav {
+    border-top: 6px solid var(--secondary-color);
+}
+
+a .container-fluid {
+    background-color: var(--primary-color) !important;
+}
+
+ul li a {
+    color: var(--text-color-secondary) !important;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+nav button span {
+    font-size: 1rem;
+}
+
+/* **__________________ Header/Nav Sin Bootstrap__________________** */
+
+/* header {
     background-color: var(--grey-color);
     display: flex;
     flex-direction: column;
     text-align: center;
     margin-bottom: 40px;
-}
+} */
 
-header a.logo {
+/* header a.logo {
     margin-top: 10px;
-}
+} */
 
 /* TODO: Hacer el NAV con menú hamburguesa */
-header nav {
+/* header nav {
     background-color: var(--primary-color);
     border-top: 6px solid var(--secondary-color);
-}
+} */
 
 /* Bullets Off */
-nav ul {
+/* nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
@@ -70,15 +110,15 @@ nav ul {
 
 nav ul li {
     padding: 5px 15px;
-}
+} */
 
 /* Underlined Off */
-nav ul li a {
+/* nav ul li a {
     text-decoration: none;
     color: var(--text-color-secondary);
     text-transform: uppercase;
     font-size: 1rem;
-}
+} */
 
 /* __________________ Footer __________________ */
 
@@ -157,28 +197,6 @@ main {
     grid-area: main;
 }
 
-/* __________________ Slider Iphone __________________ */
-
-/* .iphone{
-    position: relative;
-    width: 75%;
-    left: 12vw;
-}
-
-.img-slider-container picture {
-    grid-gap: slider;
-}
-
-.img-slider-container picture img {
-    box-shadow: 3px 3px 2px rgba(0,0, 0, 1);
-    border: 2px solid black;
-    border-radius: 6%;
-    position: absolute;
-    top: 245px;
-    left: 130px;
-    z-index: -1;
-} */
-
 /* __________________ Galería Slider con formato de un celular __________________ */
 
 .img-slider-container {
@@ -187,14 +205,9 @@ main {
     border: 6px solid rgb(38, 38, 38);
     border-radius: 6%;
     overflow: hidden;
-}
-
-.img-slider-container picture {
     grid-gap: slider;
-}
-
-.img-slider-container picture img {
-    height: 100%;
+    /*! Seteamos ancho máximo de contenedor el mismo que el de la foto, caso contrario el slider querrá aumentar más del 100% de la misma y rompe */
+    max-width: 700px;
 }
 
 /* Simularción de cámara frontal de celular para darle estética al slider */
@@ -254,6 +267,10 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.card-img {
+    width: 350px;
 }
 
 .card-info {
@@ -531,7 +548,19 @@ main {
 
 @media(min-width:768px){
 
-    header {
+    .logo {
+        margin-left: 10%;
+    }
+
+    .nav-button {
+        margin-right: 10%;
+    }
+
+    .nav-margin {
+        padding-right: 4% !important;
+    }
+
+    /* header {
         text-align: left;
     }
 
@@ -542,7 +571,7 @@ main {
     nav ul {
         justify-content: right;
         margin: 0 5%;
-    }
+    } */
 
     .footer-container {
         justify-content: space-evenly;
@@ -702,15 +731,30 @@ main {
 
 @media (min-width:1200px){
 
+    .logo {
+        margin-left: 10%;
+    }
+
+    .nav-margin {
+        padding-right: 4% !important;
+    }
+
     /* Estilo para link hover */
-    nav ul li:hover {
+    /* nav ul li:hover {
         background-color: var(--secondary-color);
     }
 
+    nav ul li a:hover {
+        color: white;
+    } */
 
     .camera-cellphone {
         width: 20px;
         height: 20px;
+    }
+
+    .card-img {
+        width: 400px;
     }
 
     .card-info {
