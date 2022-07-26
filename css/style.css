@@ -166,6 +166,7 @@ main {
     border-radius: 6%;
     overflow: hidden;
     grid-gap: slider;
+    /*! Seteamos ancho máximo de contenedor el mismo que el de la foto, caso contrario el slider querrá aumentar más del 100% de la misma y rompe */
     max-width: 700px;
 }
 
@@ -677,6 +678,10 @@ main {
     /* Estilo para link hover */
     nav ul li:hover {
         background-color: var(--secondary-color);
+    }
+
+    nav ul li a:hover {
+        color: white;
     }
 
 
