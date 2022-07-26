@@ -269,6 +269,10 @@ main {
     align-items: center;
 }
 
+.card-img {
+    width: 350px;
+}
+
 .card-info {
     width: 350px;
 }
@@ -747,6 +751,10 @@ main {
     .camera-cellphone {
         width: 20px;
         height: 20px;
+    }
+
+    .card-img {
+        width: 400px;
     }
 
     .card-info {
