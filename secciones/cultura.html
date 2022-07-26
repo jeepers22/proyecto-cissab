@@ -11,29 +11,39 @@
 </head>
     <body>
         <header>
-            <!-- Logo linkeable -->
-            <a class="logo" href="../index.html"><img class="logoImagen" src="../img/Logo CISSAB.png"
-                    alt="Logo Cissab"></a>
-            <!-- Barra de navegación -->
-            <nav>
-                <ul>
-                    <li>
-                        <a href="../index.html">Inicio</a>
-                    </li>
-                    <li>
-                        <a href="cultura.html">Cultura</a>
-                    </li>
-                    <li>
-                        <a href="juventud.html">Jueventud</a>
-                    </li>
-                    <li class="deportesNav">
-                        <a href="deportes.html">Deportes</a>
-                    </li>
-                    <li>
-                        <a href="contacto.html">Contacto</a>
-                    </li>
-                </ul>
+            <!-- ** HEADER CON BOOTSTRAP ** -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light py-0">
+                <div class="container-fluid px-0 d-flex flex-lg-column">
+                    <a class="navbar-brand align-self-center align-self-lg-start logo py-2" href="index.html"><img class="logoImagen" src="../img/Logo CISSAB.png" alt="Logo Cissab"></a>
+                    <button class="navbar-toggler align-self-center nav-button" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="container-fluid barra-superior-nav">
+                        <div class="collapse navbar-collapse text-center justify-content-end nav-margin" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link active px-3" aria-current="page" href="../index.html">Inicio</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active px-3" href="cultura.html">Cultura</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active px-3" href="juventud.html">Jueventud</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active px-3" href="deportes.html">Deportes</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active px-3" href="contacto.html">Contacto</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </nav>
+            <!-- ** FIN HEADER CON BOOTSTRAP ** -->
+            <!-- TODO: seguir probando propiedades de la Wave -->
+            <!-- <div class="headerWave" style="height: 100px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M-1.41,74.52 C145.87,-149.48 134.59,297.55 501.41,68.59 L500.00,150.00 L-17.77,160.38 Z" style="stroke: none; fill: #fff;"></path></svg></div> -->
         </header>
         <div class="section-title">
             <h1>CULTURA</h1>

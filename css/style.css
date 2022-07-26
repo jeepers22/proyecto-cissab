@@ -40,28 +40,68 @@ a {
     cursor: pointer
 }
 
-/* __________________ Header/Nav __________________ */
+/* **__________________ Header/Nav Con Bootstrap__________________** */
 
 header {
+    margin-bottom: 40px;
+}
+
+.logo {
+    margin-left: 10%;
+}
+
+.nav-button {
+    margin-right: 10%;
+}
+
+header nav {
+    background-color: var(--grey-color);
+}
+
+nav div div {
+    background-color: var(--primary-color);
+}
+
+.barra-superior-nav {
+    border-top: 6px solid var(--secondary-color);
+}
+
+a .container-fluid {
+    background-color: var(--primary-color) !important;
+}
+
+ul li a {
+    color: var(--text-color-secondary) !important;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+nav button span {
+    font-size: 1rem;
+}
+
+/* **__________________ Header/Nav Sin Bootstrap__________________** */
+
+/* header {
     background-color: var(--grey-color);
     display: flex;
     flex-direction: column;
     text-align: center;
     margin-bottom: 40px;
-}
+} */
 
-header a.logo {
+/* header a.logo {
     margin-top: 10px;
-}
+} */
 
 /* TODO: Hacer el NAV con menú hamburguesa */
-header nav {
+/* header nav {
     background-color: var(--primary-color);
     border-top: 6px solid var(--secondary-color);
-}
+} */
 
 /* Bullets Off */
-nav ul {
+/* nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
@@ -70,15 +110,15 @@ nav ul {
 
 nav ul li {
     padding: 5px 15px;
-}
+} */
 
 /* Underlined Off */
-nav ul li a {
+/* nav ul li a {
     text-decoration: none;
     color: var(--text-color-secondary);
     text-transform: uppercase;
     font-size: 1rem;
-}
+} */
 
 /* __________________ Footer __________________ */
 
@@ -504,7 +544,19 @@ main {
 
 @media(min-width:768px){
 
-    header {
+    .logo {
+        margin-left: 10%;
+    }
+
+    .nav-button {
+        margin-right: 10%;
+    }
+
+    .nav-margin {
+        padding-right: 4% !important;
+    }
+
+    /* header {
         text-align: left;
     }
 
@@ -515,7 +567,7 @@ main {
     nav ul {
         justify-content: right;
         margin: 0 5%;
-    }
+    } */
 
     .footer-container {
         justify-content: space-evenly;
@@ -675,15 +727,22 @@ main {
 
 @media (min-width:1200px){
 
+    .logo {
+        margin-left: 10%;
+    }
+
+    .nav-margin {
+        padding-right: 4% !important;
+    }
+
     /* Estilo para link hover */
-    nav ul li:hover {
+    /* nav ul li:hover {
         background-color: var(--secondary-color);
     }
 
     nav ul li a:hover {
         color: white;
-    }
-
+    } */
 
     .camera-cellphone {
         width: 20px;
