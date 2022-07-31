@@ -1,0 +1,33 @@
+header {
+    margin-bottom: 40px;
+    nav {
+        background-color: $color-grey;
+        .logo {
+            margin-left: 10%;
+        }
+        .nav-button {
+            margin-right: 10%;
+            span {
+                font-style: 1rem;
+            }
+        }
+        .barra-superior-nav {
+            @include separador-doble($color-primary, top, 6px, $color-secondary);
+            .nav-margin {
+                @include media-md {
+                    padding-right: 4% !important;
+                }
+                ul {
+                    li {
+                        a {
+                            color: $color-white !important;
+                            text-transform: uppercase;
+                            font-style: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

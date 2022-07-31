@@ -1,0 +1,33 @@
+// SEPARADORES
+@mixin separador-doble($color-bg, $side, $size, $color-border) {
+    background-color: $color-bg;
+    color: $color-white;
+    border-#{$side}: $size solid $color-border;
+}
+
+// TEXTOS
+@mixin heading-styles {
+    text-transform: uppercase;
+}
+
+@mixin p-styles {
+    font-size: $fs-p;
+    line-height: $lh-p;
+}
+
+@mixin p-md-styles {
+    font-size: $fs-p;
+    line-height: $lh-md-p;
+}
+
+@mixin p-xl-styles {
+    font-size: $fs-p;
+    line-height: $lh-xl-p;
+}
+
+// CARD TITLES
+@mixin card-title {
+    background-color: $color-secondary;
+    color: $color-white;
+    font-size: $fs-h3;
+}

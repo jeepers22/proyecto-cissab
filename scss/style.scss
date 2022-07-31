@@ -1,0 +1,14 @@
+// GENERALS
+@import "./generals/fonts.scss";
+@import "./generals/variables.scss";
+@import "./generals/mixins";
+@import "./generals/breakpoints";
+@import "./generals/reset";
+
+// COMPONENTS
+
+// SECTIONS
+@import "./sections/header";
+@import "./sections/presentation";
+@import "./sections/inicio";
+@import "./sections/footer";
