@@ -7,27 +7,48 @@
 
 // TEXTOS
 @mixin heading-styles {
-    text-transform: uppercase;
+    text-transform: $set-tt-heading;
 }
 
 @mixin p-styles {
-    font-size: $fs-p;
-    line-height: $lh-p;
+    font-size: $set-fs-p;
+    line-height: $set-lh-p;
 }
 
-@mixin p-md-styles {
-    font-size: $fs-p;
-    line-height: $lh-md-p;
+// CARD
+@mixin card-container {
+    display: flex;
+    width: 100%;
+    flex-direction: $set-direction;
 }
 
-@mixin p-xl-styles {
-    font-size: $fs-p;
-    line-height: $lh-xl-p;
+@mixin card-img {
+    width: $set-w-card;
 }
 
-// CARD TITLES
+@mixin card-info {
+    width: $set-w-card;
+}
+
 @mixin card-title {
-    background-color: $color-secondary;
-    color: $color-white;
-    font-size: $fs-h3;
+    background-color: $set-color-secondary;
+    color: $set-color-white;
+    font-size: $set-fs-h3;
+    text-align: center;
+}
+
+@mixin card-description {
+    width: calc($set-w-card - $set-w-card-description);
+    margin: 0 auto;
+    margin-top: $set-margin-top;
+}
+
+@mixin card-sub-title {
+    font-size: $set-fs-h4;
+    font-weight: bold;
+}
+
+@mixin card-p {
+    font-size: $set-fs-p;
+    line-height: $set-lh-p;
 }

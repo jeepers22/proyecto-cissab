@@ -1,0 +1,22 @@
+// TEMPLATE CARD REUTILIZABLE
+.card-container {
+    @include card-container;
+    .card-img {
+        @include card-img;
+    }
+    .card-info {
+        @include card-info;
+        h3 {
+            @include card-title;
+        }
+        .card-description {
+            @include card-description;
+            h4 {
+                @include card-sub-title;
+            }
+            p {
+                @include card-p;
+            }
+        }
+    }
+}

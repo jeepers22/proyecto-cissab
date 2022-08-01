@@ -17,7 +17,7 @@
     margin: 0 40px;
     padding: 0.7rem;
     h1 {
-        font-size: $fs-h1;
+        font-size: $set-fs-h1;
         font-weight: bold;
         margin-bottom: 0px;
     }
@@ -27,7 +27,7 @@
         padding-top: 2px;
         h2 {
             color: white;
-            font-size: $fs-h3;
+            font-size: $set-fs-h3;
             font-weight: normal;
         }
     }
@@ -89,7 +89,7 @@ main {
     h2 {
         grid-area: main-events-title;
         width: 100%;
-        font-size: $fs-h2;
+        font-size: $set-fs-h2;
         text-align: center;
         @include separador-doble($color-secondary, bottom, 5px, $color-primary);
         @include media-md {
@@ -98,54 +98,39 @@ main {
     }
 }
 
-.card-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 @for $i from 1 through 4 {
     .card-container-#{$i} {
         grid-area: card-container-#{$i};
-        @extend .card-container;
     }
 }
 
 @include media-md {
-    .card-container {
-        flex-direction: row;
-        justify-content: center;
-    }
     @for $i from 1 through 4 {
         @if ($i % 2) == 0 {
             .card-container-#{$i} {
                 flex-direction: row-reverse;
             }
         }
+        // @else {
+        //     .card-container-#{$i} {
+        //         flex-direction: row;
+        //     }
+        // }
     }
 }
 
 .card-img {
-    width: $w-card-sm;
-    @include media-md {
-        height: $w-card-sm;
-    }
-    @include media-xl {
-        width: $w-card-xl;
-        height: $w-card-xl;
-    }
+    
 }
 
 .card-info  {
-    @extend .card-img;
     h3 {
         @include card-title;
         text-align: center;
         padding: .3em;
-        margin-bottom: 1em;
     }
     h4 {
-        font-size: $fs-h4;
+        font-size: $set-fs-h4;
         font-weight: bold;
     }
     p {
@@ -154,22 +139,14 @@ main {
     @include media-md {
         h3 {
             text-align: right;
-            margin-bottom: 5em;
-        }
-        h4 {
-            padding: 0 30px;
-        }
-        p {
-            padding: 0 30px;
-            @include p-md-styles;
         }
     }
     @include media-xl {
         h3 {
-            margin-bottom: 7em;
+
         }
         p {
-            @include p-xl-styles;
+            @include p-styles;
         }
     }
 }
