@@ -98,55 +98,42 @@ main {
     }
 }
 
-@for $i from 1 through 4 {
-    .card-container-#{$i} {
-        grid-area: card-container-#{$i};
-    }
-}
+// TODO: mejorar, esto 
 
 @include media-md {
+    // ZigZag Horizontal CARDS
     @for $i from 1 through 4 {
-        @if ($i % 2) == 0 {
-            .card-container-#{$i} {
+        .card-container-#{$i} {
+            grid-area: card-container-#{$i};
+            @if ($i % 2) == 0 {
                 flex-direction: row-reverse;
             }
+            @else {
+                flex-direction: row;
+            }
+            .card-info {
+                .card-description {
+                    width: calc($w-card - 20%);
+                    margin-top: 5rem;
+                }
+            }
         }
-        // @else {
-        //     .card-container-#{$i} {
-        //         flex-direction: row;
-        //     }
-        // }
     }
 }
 
-.card-img {
-    
-}
-
-.card-info  {
-    h3 {
-        @include card-title;
-        text-align: center;
-        padding: .3em;
-    }
-    h4 {
-        font-size: $set-fs-h4;
-        font-weight: bold;
-    }
-    p {
-        @include p-styles;
-    }
-    @include media-md {
-        h3 {
-            text-align: right;
-        }
-    }
-    @include media-xl {
-        h3 {
-
-        }
-        p {
-            @include p-styles;
+@include media-xl {
+    @for $i from 1 through 4 {
+        .card-container-#{$i} {
+            .card-img {
+                width: 400px;
+            }
+            .card-info {
+                width: 400px;
+                .card-description {
+                    width: calc(400px - 20%);
+                    margin-top: 7rem;
+                }
+            }
         }
     }
 }

@@ -7,7 +7,7 @@
 
 // TEXTOS
 @mixin heading-styles {
-    text-transform: $set-tt-heading;
+    text-transform: $tt-heading;
 }
 
 @mixin p-styles {
@@ -18,29 +18,31 @@
 // CARD
 @mixin card-container {
     display: flex;
+    flex-direction: $direction;
     width: 100%;
-    flex-direction: $set-direction;
 }
 
+// ! Se que card-img y card-info repiten código y podría hacer un único mixin, sólo lo hago así porque quiero hacer un componente reutilizable, en caso que en otro proyecto tenga distinta medida de img y de caja de info
+
 @mixin card-img {
-    width: $set-w-card;
+    width: $w-card;
 }
 
 @mixin card-info {
-    width: $set-w-card;
+    width: $w-card;
 }
 
 @mixin card-title {
-    background-color: $set-color-secondary;
-    color: $set-color-white;
+    background-color: $color-secondary;
+    color: $color-white;
     font-size: $set-fs-h3;
     text-align: center;
 }
 
 @mixin card-description {
-    width: calc($set-w-card - $set-w-card-description);
+    width: calc($w-card - $w-card-description);
     margin: 0 auto;
-    margin-top: $set-margin-top;
+    margin-top: $margin-top;
 }
 
 @mixin card-sub-title {
