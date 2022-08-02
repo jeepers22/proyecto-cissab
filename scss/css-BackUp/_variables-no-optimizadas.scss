@@ -1,0 +1,73 @@
+// VARIABLES SCSS
+
+// COLORS
+$color-primary: #2e80d3;
+$color-secondary: #ff6600;
+$color-grey: #EEEEEE;
+$color-white: #FFFFFF;
+$color-black: #000000;
+
+// FONT FAMILYS
+$ff-primary: 'Poppins', sans-serif;
+
+// HEADINGS
+$tt-headings: uppercase;
+
+// VARIBLES MOBILE
+
+// FONT SIZES
+$fs-h1: 1.8rem;
+$fs-h2: 1.3rem;
+$fs-h3: 1.1rem;
+$fs-h4: 1.1rem;
+$fs-p: 1rem;
+
+// LINE HEIGHT
+$lh-p: 1.2rem;
+
+// CARD ORIENTATION
+$direction: column;
+
+// CARD SIZE
+$w-card: 350px;
+
+@media (min-width:768px) {
+
+    // FONT SIZES
+    $fs-h1: 1.8rem;
+    $fs-h2: 1.3rem;
+    $fs-h3: 1.1rem;
+    $fs-h4: 1.1rem;
+    $fs-p: 1rem;
+
+    // LINE HEIGHT
+    $lh-p: 1.3rem;
+
+    // CARD ORIENTATION
+    $direction: row;
+
+    // CARD SIZE
+    $w-card: 350px;
+}
+
+@media (min-width:1200px) {
+
+    // FONT SIZES
+    $fs-h1: 1.8rem;
+    $fs-h2: 1.3rem;
+    $fs-h3: 1.1rem;
+    $fs-h4: 1.1rem;
+    $fs-p: 1rem;
+
+    // LINE HEIGHT
+    $lh-p: 1.5rem;
+
+    // CARD ORIENTATION
+    $direction: row;
+
+     // CARD SIZE
+    $w-card: 400px;
+}
+
+//////////////////////////////////////////////////////////////////////
+// VARIABLES CSS (para jugar con responsive a traves de las variables

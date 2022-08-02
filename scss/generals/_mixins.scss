@@ -1,0 +1,56 @@
+// SEPARADORES
+@mixin separador-doble($color-bg, $side, $size, $color-border) {
+    background-color: $color-bg;
+    color: $color-white;
+    border-#{$side}: $size solid $color-border;
+}
+
+// TEXTOS
+@mixin heading-styles {
+    text-transform: $tt-heading;
+}
+
+@mixin p-styles {
+    font-size: $set-fs-p;
+    line-height: $set-lh-p;
+}
+
+// CARD
+@mixin card-container {
+    display: flex;
+    flex-direction: $direction;
+    width: 100%;
+}
+
+// ! Se que card-img y card-info repiten código y podría hacer un único mixin, sólo lo hago así porque quiero hacer un componente reutilizable, en caso que en otro proyecto tenga distinta medida de img y de caja de info
+
+@mixin card-img {
+    width: $w-card;
+}
+
+@mixin card-info {
+    width: $w-card;
+}
+
+@mixin card-title {
+    background-color: $color-secondary;
+    color: $color-white;
+    font-size: $set-fs-h3;
+    text-align: center;
+}
+
+@mixin card-description {
+    width: calc($w-card - $w-card-description);
+    margin: 0 auto;
+    margin-top: $margin-top;
+}
+
+@mixin card-sub-title {
+    font-size: $set-fs-h4;
+    font-weight: bold;
+}
+
+@mixin card-p {
+    font-size: $set-fs-p;
+    line-height: $set-lh-p;
+}

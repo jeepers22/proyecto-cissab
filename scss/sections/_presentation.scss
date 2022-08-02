@@ -1,0 +1,8 @@
+// TITULO Y PARRAFO SECCIONES
+.section-title {
+    margin-bottom: 2.5em;
+    text-align: center;
+    @include media-md {
+        text-align: left;
+    }
+}

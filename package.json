@@ -1,0 +1,19 @@
+{
+  "name": "cissabsafran",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeepers22/proyecto-cissab.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeepers22/proyecto-cissab/issues"
+  },
+  "homepage": "https://github.com/jeepers22/proyecto-cissab#readme"
+}

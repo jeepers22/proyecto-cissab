@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $ff-primary;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+    cursor: pointer
+}
+
+h1, h2, h3, h4 {
+    @include heading-styles;
+}
+
+p {
+    @include p-styles;
+}
