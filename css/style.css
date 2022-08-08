@@ -383,6 +383,76 @@ main {
   }
 }
 
+.form-container {
+  background-color: #EEEEEE;
+  width: 80%;
+  margin: 0 auto;
+  max-width: 650px;
+  padding: 10px 0;
+  border-radius: 25px;
+}
+.form-container .form-info {
+  margin: 5px 10%;
+}
+.form-container .form-info .form-info-stretch {
+  width: 100%;
+  padding: 0.2em;
+}
+.form-container .form-info textarea {
+  height: 120px;
+  resize: none;
+}
+.form-container .form-info-heigh-stretch {
+  margin: 20px 10%;
+}
+.form-container .form-info-heigh-stretch label {
+  margin-right: 15px;
+}
+.form-container .form-info-heigh-stretch input {
+  margin-right: 5px;
+}
+.form-container .form-buttons {
+  margin: 5px 10%;
+  text-align: center;
+}
+.form-container .form-buttons input {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  padding: 0.1em 0.5em;
+  color: #FFFFFF;
+  background-color: #ff6600;
+  border: none;
+  border-radius: 5px;
+}
+.form-container .form-buttons .none-display {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .form-container {
+    padding: 15px 0;
+    border-radius: 15px;
+  }
+  .form-container .form-info {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    justify-items: flex-end;
+    margin: 15px 10%;
+  }
+  .form-container .form-info .form-info-stretch {
+    width: 300px;
+  }
+  .form-container .form-buttons {
+    margin: 15px 10%;
+    margin-top: 30px;
+  }
+  .form-container .form-buttons input {
+    margin: 0 10px;
+  }
+  .form-container .form-buttons .none-display {
+    display: inline-block;
+  }
+}
 footer {
   margin-top: auto;
 }
