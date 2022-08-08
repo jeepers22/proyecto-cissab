@@ -4,5 +4,8 @@
     text-align: center;
     @include media-md {
         text-align: left;
+        margin-bottom: 3em;
+        margin-left: 10%;
+        margin-right: 10%;
     }
 }

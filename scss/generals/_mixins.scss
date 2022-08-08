@@ -2,6 +2,7 @@
 @mixin separador-doble($color-bg, $side, $size, $color-border) {
     background-color: $color-bg;
     color: $color-white;
+    text-align: center;
     border-#{$side}: $size solid $color-border;
 }
 

@@ -88,6 +88,7 @@ p {
   line-height: var(--lh-p);
 }
 
+/* Prueba comentario */
 header {
   margin-bottom: 40px;
 }
@@ -106,6 +107,7 @@ header nav .nav-button span {
 header nav .barra-superior-nav {
   background-color: #2e80d3;
   color: #FFFFFF;
+  text-align: center;
   border-top: 6px solid #ff6600;
 }
 @media (min-width: 768px) {
@@ -126,6 +128,9 @@ header nav .barra-superior-nav .nav-margin ul li a {
 @media (min-width: 768px) {
   .section-title {
     text-align: left;
+    margin-bottom: 3em;
+    margin-left: 10%;
+    margin-right: 10%;
   }
 }
 
@@ -212,9 +217,9 @@ main {
   grid-area: main-events-title;
   width: 100%;
   font-size: var(--fs-h2);
-  text-align: center;
   background-color: #ff6600;
   color: #FFFFFF;
+  text-align: center;
   border-bottom: 5px solid #2e80d3;
 }
 @media (min-width: 768px) {
@@ -299,6 +304,85 @@ main {
     margin-top: 7rem;
   }
 }
+.cult-general-grid {
+  display: grid;
+  grid-template-areas: "main-title" "card-1" "card-2" "card-3" "gallery";
+  gap: 40px;
+}
+@media (min-width: 768px) {
+  .cult-general-grid {
+    grid-template-areas: "main-title main-title" "card-1     card-2" "card-3     card-3" "gallery    gallery";
+    justify-content: center;
+  }
+}
+@media (min-width: 1200px) {
+  .cult-general-grid {
+    grid-template-areas: "main-title main-title main-title" "card-1     card-2     card-3" "gallery   gallery     gallery";
+  }
+}
+
+.cult-main-events-title {
+  grid-area: main-title;
+}
+.cult-main-events-title h2 {
+  width: 100%;
+  font-size: var(--fs-h2);
+  background-color: #ff6600;
+  color: #FFFFFF;
+  text-align: center;
+  border-bottom: 5px solid #2e80d3;
+}
+
+.cult-card-container-1 {
+  grid-area: card-1;
+  align-items: center;
+}
+
+.cult-card-container-2 {
+  grid-area: card-2;
+  align-items: center;
+}
+
+.cult-card-container-3 {
+  grid-area: card-3;
+  align-items: center;
+}
+
+.cult-gallery-grid {
+  grid-area: gallery;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+.cult-gallery-grid .cult-gallery-title {
+  width: 100%;
+  margin: 10px 0 20px;
+}
+.cult-gallery-grid .cult-gallery-title h2 {
+  font-size: var(--fs-h2);
+  background-color: #ff6600;
+  color: #FFFFFF;
+  text-align: center;
+  border-bottom: 5px solid #2e80d3;
+}
+@media (min-width: 768px) {
+  .cult-gallery-grid {
+    grid-template-columns: repeat(2, 300px);
+    gap: 3px 10px;
+    justify-content: center;
+    margin-top: 50px;
+    /* Para que el título de la galería ocupe toda una fila */
+  }
+  .cult-gallery-grid .cult-gallery-title {
+    grid-column: 1/-1;
+  }
+}
+@media (min-width: 1200px) {
+  .cult-gallery-grid {
+    grid-template-columns: repeat(3, 300px);
+  }
+}
+
 footer {
   margin-top: auto;
 }
@@ -308,6 +392,7 @@ footer .footer-container {
   align-items: center;
   background-color: #2e80d3;
   color: #FFFFFF;
+  text-align: center;
   border-top: 4px solid #ff6600;
   height: 150px;
   margin-top: 40px;
