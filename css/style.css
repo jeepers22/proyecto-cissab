@@ -52,7 +52,7 @@ h1, h2, h3, h4 {
   text-transform: uppercase;
 }
 
-p {
+p, footer a img {
   font-size: var(--fs-p);
   line-height: var(--lh-p);
 }
@@ -83,7 +83,7 @@ p {
   font-size: var(--fs-h4);
   font-weight: bold;
 }
-.card-container .card-info .card-description p {
+.card-container .card-info .card-description p, .card-container .card-info .card-description footer a img, footer a .card-container .card-info .card-description img {
   font-size: var(--fs-p);
   line-height: var(--lh-p);
 }
@@ -113,6 +113,11 @@ header nav .barra-superior-nav {
 @media (min-width: 768px) {
   header nav .barra-superior-nav .nav-margin {
     padding-right: 4% !important;
+  }
+}
+@media (min-width: 992px) {
+  header nav .barra-superior-nav .nav-margin ul li:hover {
+    background-color: #ff6600;
   }
 }
 header nav .barra-superior-nav .nav-margin ul li a {
@@ -159,9 +164,8 @@ header nav .barra-superior-nav .nav-margin ul li a {
   padding-top: 2px;
 }
 .welcome-title .sub-title h2 {
-  color: white;
+  color: #FFFFFF;
   font-size: var(--fs-h3);
-  font-weight: normal;
 }
 
 .img-slider-container {
@@ -468,7 +472,7 @@ main {
   line-height: 1.4rem;
 }
 @media (min-width: 768px) {
-  .juv-general-grid .juv-group-grid .juv-group-info-container .juv-group-info p {
+  .juv-general-grid .juv-group-grid .juv-group-info-container .juv-group-info p, .juv-general-grid .juv-group-grid .juv-group-info-container .juv-group-info footer a img, footer a .juv-general-grid .juv-group-grid .juv-group-info-container .juv-group-info img {
     max-width: 620px;
     margin: 0 auto;
   }
@@ -616,6 +620,12 @@ footer .footer-container {
 footer .footer-container .footer-info {
   display: inline-block;
   font-size: 1rem;
+}
+footer p, footer a img {
+  box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.2);
+}
+footer a img {
+  border-radius: 50%;
 }
 
 /*# sourceMappingURL=style.css.map */

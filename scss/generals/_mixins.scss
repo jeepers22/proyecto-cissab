@@ -16,11 +16,11 @@
     line-height: $set-lh-p;
 }
 
-// CARD
+// CARD SETEADA MEDIANTE MAP-GET
 @mixin card-container {
-    display: flex;
-    flex-direction: $direction;
-    width: 100%;
+    display: map-get($flexbox-base, display-type);
+    flex-direction: map-get($flexbox-base, direction-type);
+    width: map-get($flexbox-base, width-percent);
 }
 
 // ! Se que card-img y card-info repiten código y podría hacer un único mixin, sólo lo hago así porque quiero hacer un componente reutilizable, en caso que en otro proyecto tenga distinta medida de img y de caja de info

@@ -19,6 +19,11 @@ header {
                 }
                 ul {
                     li {
+                        @include media-lg {
+                            &:hover {
+                                background-color: $color-secondary;
+                            }
+                        }
                         a {
                             color: $color-white !important;
                             text-transform: uppercase;

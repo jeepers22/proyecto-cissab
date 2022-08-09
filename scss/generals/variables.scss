@@ -53,6 +53,13 @@ $w-card: 350px;
 $w-card-description: 5%;
 $margin-top: 1.3rem;
 
+// MAP PARA CASO BASE DE FLEX
+$flexbox-base: (
+    display-type: flex,
+    direction-type: $direction,
+    width-percent: 100%
+);
+
 
 //////////////////////////////////////////////////////////////////////
 // VARIABLES CSS (para jugar con responsive a traves de las variables)
