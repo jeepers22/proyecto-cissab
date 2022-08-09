@@ -26,9 +26,8 @@
         width: 100%;
         padding-top: 2px;
         h2 {
-            color: white;
+            color: $color-white;
             font-size: $set-fs-h3;
-            font-weight: normal;
         }
     }
 }
@@ -90,7 +89,6 @@ main {
         grid-area: main-events-title;
         width: 100%;
         font-size: $set-fs-h2;
-        text-align: center;
         @include separador-doble($color-secondary, bottom, 5px, $color-primary);
         @include media-md {
             margin-bottom: 10px;
@@ -98,7 +96,7 @@ main {
     }
 }
 
-// TODO: mejorar, esto 
+// TODO: mejorar, esto
 
 @include media-md {
     // ZigZag Horizontal CARDS

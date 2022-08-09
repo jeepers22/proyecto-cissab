@@ -1,0 +1,71 @@
+// GENERAL GRID
+
+.cult-general-grid {
+    display: grid;
+    grid-template-areas:
+    "main-title"
+    "card-1"
+    "card-2"
+    "card-3"
+    "gallery";
+    gap: 40px;
+    @include media-md {
+        grid-template-areas:
+        "main-title main-title"
+        "card-1     card-2"
+        "card-3     card-3"
+        "gallery    gallery";
+        justify-content: center;
+    }
+    @include media-xl {
+        grid-template-areas:
+        "main-title main-title main-title"
+        "card-1     card-2     card-3"
+        "gallery   gallery     gallery";
+    }
+}
+
+.cult-main-events-title {
+    grid-area: main-title;
+    h2 {
+        width: 100%;
+        font-size: $set-fs-h2;
+        @include separador-doble($color-secondary, bottom, 5px, $color-primary);
+    }
+}
+
+@for $i from 1 through 3 {
+    .cult-card-container-#{$i} {
+        grid-area: card-#{$i};
+        align-items: center;
+    }
+}
+
+.cult-gallery-grid {
+    grid-area: gallery;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    .cult-gallery-title {
+        width: 100%;
+        margin: 10px 0 20px;
+        h2 {
+            font-size: $set-fs-h2;
+            @include separador-doble($color-secondary, bottom, 5px, $color-primary);
+        }
+    }
+    @include media-md {
+        grid-template-columns: repeat(2, 300px);
+        gap: 3px 10px;
+        justify-content: center;
+        margin-top: 50px;
+        /* Para que el título de la galería ocupe toda una fila */
+        .cult-gallery-title {
+            grid-column: 1/-1;
+        }
+    }
+    @include media-xl {
+        grid-template-columns: repeat(3, 300px);
+    }
+}
+

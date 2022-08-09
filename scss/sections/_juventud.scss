@@ -1,0 +1,150 @@
+.juv-escalera-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 280px;
+    margin: 0 auto 40px;
+    a {
+        text-decoration: none;
+        /* Dimensiones y estilo a cada escalón */
+        .juv-escalon{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: .9rem;
+            height: 8vh;
+            color: $color-white;
+            transition: all .2s linear;
+            &:hover {
+                transform: scale(1.1);
+                box-shadow: 2px 2px 10px rgba(0,0, 0, .3);
+            }
+        }
+        .juv-escalon-1 {
+            background-color: $color-primary;
+            width: 280px;
+        }
+
+        .juv-escalon-2 {
+            background-color: #4296eb;
+            width: 210px;
+        }
+
+        .juv-escalon-3 {
+            background-color: $color-secondary;
+            width: 140px;
+        }
+
+        .juv-escalon-4 {
+            background-color: #fc9856;
+            width: 70px;
+        }
+    }
+    @include media-md {
+        .juv-escalera-container {
+            width: 360px;
+        }
+
+        .juv-escalon{
+            height: 10vh;
+        }
+
+        .juv-escalon-1 {
+            width: 360px;
+        }
+
+        .juv-escalon-2 {
+            width: 270px;
+        }
+
+        .juv-escalon-3 {
+            width: 180px;
+        }
+
+        .juv-escalon-4 {
+            width: 90px;
+        }
+    }
+}
+
+/* __________________ General Grid __________________ */
+.juv-general-grid {
+    display: grid;
+    gap: 40px;
+    .juv-group-grid {
+        display: grid;
+        gap: 20px;
+        .juv-group-title {
+            h2 {
+                font-size: $set-fs-h2;
+                @include separador-doble($color-secondary, bottom, 5px, $color-primary);
+            }
+        }
+        .juv-group-info-container {
+            text-align: center;
+            .juv-group-info {
+                padding: .5rem;
+                line-height: 1.4rem;
+                @include media-md {
+                    p {
+                        max-width: 620px;
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+        .juv-group-gallery-grid {
+            display: grid;
+            justify-content: center;
+            gap: 15px;
+            iframe {
+                width: 300px;
+                height: 300px;
+            }
+        }
+        @include media-md {
+            .juv-group-gallery-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 300px);
+                iframe {
+                    width: 615px;
+                    height: 300px;
+                }
+            }
+        }
+    }
+}
+
+@include media-xl {
+    .juv-general-grid {
+        gap: 80px;
+        .juv-group-grid {
+            grid-template-areas:
+            "group-title  group-title"
+            "group-info   group-gallery";
+            grid-template-columns: 1fr auto;
+            max-width: 1300px;
+            justify-content: center;
+            margin: 0 auto;
+            .juv-group-title {
+                grid-area: group-title;
+            }
+            .juv-group-info-container {
+                grid-area: group-info;
+                align-self: center;
+                justify-self: center;
+                text-align: left;
+                .juv-group-info {
+                    margin-left: 15px;
+                }
+            }
+            .juv-group-gallery-grid {
+                grid-area: group-gallery;
+                display: grid;
+                grid-template-columns: repeat(3, 300px);
+                justify-content: center;
+                margin-right: 30px;
+            }
+        }
+    }
+}
