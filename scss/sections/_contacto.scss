@@ -1,28 +1,105 @@
 .form-container {
-    background-color: $color-grey;
-    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+    width: 90%;
     margin: 0 auto;
+    padding: 40px 50px;
+    border-radius: 10px;
     max-width: 650px;
-    padding: 10px 0;
-    border-radius: 25px;
+    background-color: #1b5ba0;
+    box-shadow: 10px 10px 10px rgb(0, 0, 0, .5);
     .form-info {
-        margin: 5px 10%;
-        .form-info-stretch {
+        display: flex;
+        position: relative;
+        input {
+            padding: 10px;
+            border: 2px solid rgba(255, 255, 255, 0.25);
+            background-color: #1b5ba0;
             width: 100%;
-            padding: .2em;
+            border-radius: 5px;
+            outline: none;
+            color: $color-white;
+            font-size: 1rem;
+            transition: 0.5s;
+            &:valid {
+                border: 2px solid $color-secondary;
+            }
+            &:focus {
+                border: 2px solid $color-secondary;
+            }
+            &:valid ~ label {
+                color: $color-secondary;
+                transform: translate(10px, -8px);
+                font-size: 0.8rem;
+                padding: 0 10px;
+                background-color: #1b5ba0;
+            }
+            &:focus ~ label {
+                color: $color-secondary;
+                transform: translate(10px, -8px);
+                font-size: 0.8rem;
+                padding: 0 10px;
+                background-color: #1b5ba0;
+            }
+        }
+        label {
+            position: absolute;
+            left: 0;
+            padding: 10px;
+            pointer-events: none;
+            color: rgba(255, 255, 255, 0.5);
+            text-transform: uppercase;
+            transition: 0.5s;
+        }
+        select {
+            padding: 10px;
+            border: 2px solid rgba(255, 255, 255, 0.25);
+            background-color: #1b5ba0;
+            width: 100%;
+            border-radius: 5px;
+            outline: none;
+            color: $color-white;
+            font-size: 1rem;
+            transition: 0.5s;
+            &:focus {
+                border: 2px solid $color-secondary;
+            }
+            &:focus ~ label {
+                color: $color-secondary;
+                transform: translate(10px, -8px);
+                font-size: 0.8rem;
+                padding: 0 10px;
+                background-color: #1b5ba0;
+            }
         }
         textarea {
-            height: 120px;
-            resize: none;
+            padding: 10px;
+            border: 2px solid rgba(255, 255, 255, 0.25);
+            background-color: #1b5ba0;
+            width: 100%;
+            border-radius: 5px;
+            outline: none;
+            color: $color-white;
+            font-size: 1rem;
+            transition: 0.5s;
+            &:focus {
+                border: 2px solid $color-secondary;
+            }
+            &:focus ~ label {
+                color: $color-secondary;
+                transform: translate(10px, -8px);
+                font-size: 0.8rem;
+                padding: 0 10px;
+                background-color: #1b5ba0;
+            }
         }
-    }
-    .form-info-heigh-stretch {
-        margin: 20px 10%;
-        label {
-            margin-right: 15px;
-        }
-        input {
-            margin-right: 5px;
+        .effect-initialize{
+            transform: translate(10px, -8px);
+            font-size: 0.8rem;
+            padding: 0 10px;
+            background-color: #1b5ba0;
         }
     }
     .form-buttons {
@@ -41,21 +118,14 @@
             display: none;
         }
     }
+    .label-check {
+        color: rgba(255, 255, 255, 0.5);
+        margin: 5px 0;
+    }
 }
 
 @include media-md {
     .form-container {
-        padding: 15px 0;
-        border-radius: 15px;
-        .form-info {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            justify-items: flex-end;
-            margin: 15px 10%;
-            .form-info-stretch {
-                width: 300px;
-            }
-        }
         .form-buttons {
             margin: 15px 10%;
             margin-top: 30px;
@@ -68,4 +138,3 @@
         }
     }
 }
-
