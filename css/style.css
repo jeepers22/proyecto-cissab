@@ -88,7 +88,6 @@ p, footer a img {
   line-height: var(--lh-p);
 }
 
-/* Prueba comentario */
 header {
   margin-bottom: 40px;
 }
@@ -529,32 +528,109 @@ main {
   }
 }
 .form-container {
-  background-color: #EEEEEE;
-  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: stretch;
+  width: 90%;
   margin: 0 auto;
+  padding: 40px 50px;
+  border-radius: 10px;
   max-width: 650px;
-  padding: 10px 0;
-  border-radius: 25px;
+  background-color: #1b5ba0;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
 }
 .form-container .form-info {
-  margin: 5px 10%;
+  display: flex;
+  position: relative;
 }
-.form-container .form-info .form-info-stretch {
+.form-container .form-info input {
+  padding: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  background-color: #1b5ba0;
   width: 100%;
-  padding: 0.2em;
+  border-radius: 5px;
+  outline: none;
+  color: #FFFFFF;
+  font-size: 1rem;
+  transition: 0.5s;
+}
+.form-container .form-info input:valid {
+  border: 2px solid #ff6600;
+}
+.form-container .form-info input:focus {
+  border: 2px solid #ff6600;
+}
+.form-container .form-info input:valid ~ label {
+  color: #ff6600;
+  transform: translate(10px, -8px);
+  font-size: 0.8rem;
+  padding: 0 10px;
+  background-color: #1b5ba0;
+}
+.form-container .form-info input:focus ~ label {
+  color: #ff6600;
+  transform: translate(10px, -8px);
+  font-size: 0.8rem;
+  padding: 0 10px;
+  background-color: #1b5ba0;
+}
+.form-container .form-info label {
+  position: absolute;
+  left: 0;
+  padding: 10px;
+  pointer-events: none;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+.form-container .form-info select {
+  padding: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  background-color: #1b5ba0;
+  width: 100%;
+  border-radius: 5px;
+  outline: none;
+  color: #FFFFFF;
+  font-size: 1rem;
+  transition: 0.5s;
+}
+.form-container .form-info select:focus {
+  border: 2px solid #ff6600;
+}
+.form-container .form-info select:focus ~ label {
+  color: #ff6600;
+  transform: translate(10px, -8px);
+  font-size: 0.8rem;
+  padding: 0 10px;
+  background-color: #1b5ba0;
 }
 .form-container .form-info textarea {
-  height: 120px;
-  resize: none;
+  padding: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  background-color: #1b5ba0;
+  width: 100%;
+  border-radius: 5px;
+  outline: none;
+  color: #FFFFFF;
+  font-size: 1rem;
+  transition: 0.5s;
 }
-.form-container .form-info-heigh-stretch {
-  margin: 20px 10%;
+.form-container .form-info textarea:focus {
+  border: 2px solid #ff6600;
 }
-.form-container .form-info-heigh-stretch label {
-  margin-right: 15px;
+.form-container .form-info textarea:focus ~ label {
+  color: #ff6600;
+  transform: translate(10px, -8px);
+  font-size: 0.8rem;
+  padding: 0 10px;
+  background-color: #1b5ba0;
 }
-.form-container .form-info-heigh-stretch input {
-  margin-right: 5px;
+.form-container .form-info .effect-initialize {
+  transform: translate(10px, -8px);
+  font-size: 0.8rem;
+  padding: 0 10px;
+  background-color: #1b5ba0;
 }
 .form-container .form-buttons {
   margin: 5px 10%;
@@ -572,21 +648,12 @@ main {
 .form-container .form-buttons .none-display {
   display: none;
 }
+.form-container .label-check {
+  color: rgba(255, 255, 255, 0.5);
+  margin: 5px 0;
+}
 
 @media (min-width: 768px) {
-  .form-container {
-    padding: 15px 0;
-    border-radius: 15px;
-  }
-  .form-container .form-info {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    justify-items: flex-end;
-    margin: 15px 10%;
-  }
-  .form-container .form-info .form-info-stretch {
-    width: 300px;
-  }
   .form-container .form-buttons {
     margin: 15px 10%;
     margin-top: 30px;
