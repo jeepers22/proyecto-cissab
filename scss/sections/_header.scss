@@ -6,6 +6,12 @@ header {
         background-color: $color-grey;
         .logo {
             margin-left: 10%;
+            img {
+                width: 85%;
+                @include media-md {
+                    width: 100%;
+                }
+            }
         }
         .nav-button {
             margin-right: 10%;

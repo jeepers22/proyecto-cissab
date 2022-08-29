@@ -1,6 +1,4 @@
 
-// ! hay medidas repetidas porque la idea es utilizar esto como template, e ir comentando las medidas que no harían falta para cada proyecto en particular, para no duplicar código en el css
-
 // COLORS
 
 $color-primary: #2e80d3;
@@ -15,22 +13,22 @@ $ff-primary: 'Poppins', sans-serif;
 // TEXT TRANSFORM HEADINGS
 $tt-heading: uppercase;
 
-// FONT SIZES (falta retocar medidas para cada breakpoint)
-$fs-sm-h1: 1.8rem;
-$fs-md-h1: 1.8rem;
+// FONT SIZES
+$fs-sm-h1: 1.5rem;
+$fs-md-h1: 1.7rem;
 $fs-xl-h1: 1.8rem;
-$fs-sm-h2: 1.3rem;
+$fs-sm-h2: 1.2rem;
 $fs-md-h2: 1.3rem;
-$fs-xl-h2: 1.3rem;
+$fs-xl-h2: 1.4rem;
 $fs-sm-h3: 1.1rem;
-$fs-md-h3: 1.1rem;
-$fs-xl-h3: 1.1rem;
-$fs-sm-h4: 1.1rem;
+$fs-md-h3: 1.2rem;
+$fs-xl-h3: 1.3rem;
+$fs-sm-h4: 1rem;
 $fs-md-h4: 1.1rem;
-$fs-xl-h4: 1.1rem;
+$fs-xl-h4: 1.2rem;
 $fs-sm-p: 1rem;
-$fs-md-p: 1rem;
-$fs-xl-p: 1rem;
+$fs-md-p: 1.1rem;
+$fs-xl-p: 1.1rem;
 $set-fs-h1: var(--fs-h1);
 $set-fs-h2: var(--fs-h2);
 $set-fs-h3: var(--fs-h3);
@@ -39,8 +37,8 @@ $set-fs-h5: var(--fs-h5 );
 $set-fs-p: var(--fs-p);
 
 // LINE HEIGHTS
-$lh-sm-p: 1.2rem;
-$lh-md-p: 1.3rem;
+$lh-sm-p: 1.4rem;
+$lh-md-p: 1.5rem;
 $lh-xl-p: 1.5rem;
 $set-lh-p: var(--lh-p);
 

@@ -1,0 +1,198 @@
+/* DEPORTES STYLES */
+
+.dep-container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    .dep-card {
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 85%;
+        height: 350px;
+        max-width: 600px;
+        margin: 40px 0;
+        border-radius: 10px;
+        transition: 0.5s;
+        box-shadow: 3px 3px 15px rgba(0, 0, 0, 1);
+        background: linear-gradient(45deg, #1a2f3f, #7094ce);
+        .dep-card-title {
+            position: absolute;
+            left: 0;
+            top: 0;
+            h2 {
+                text-transform: uppercase;
+                font-size: 2em;
+                border-top-left-radius: 10px;
+                padding: .2em .4em;
+                background-color: $color-secondary;
+                box-shadow: 3px 3px 3px $color-primary;
+                color: $color-white;
+                font-size: $set-fs-h1;
+                text-align: center;
+            }
+        }
+        img {
+            position:absolute;
+            bottom: 0;
+            width: 70%;
+            height: 330px;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: 0.5s;
+        }
+        &:hover{
+            height: 550px;
+            img{
+                left: 65%;
+                height: 250px;
+                margin-bottom: 30px;
+            }
+            .dep-card-content {
+                left: 0;
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+        .dep-card-content {
+            width: 100%;
+            left: 0;
+            margin-top: 50px;
+            padding: 40px;
+            position: relative;
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.5s;
+            h2 {
+                color: #fff;
+                text-transform: uppercase;
+                font-size: 2.2em;
+                line-height: 1em;
+            }
+            p {
+                color: #fff;
+            }
+            a {
+                position: relative;
+                color: #111;
+                background-color: #fff;
+                display: inline-block;
+                padding: .5rem;
+                margin-top: 10px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+@media (min-width: 500px) {
+    .dep-container {
+        .dep-card {
+            &:hover{
+                height: 450px;
+                img{
+                    left: 65%;
+                }
+            }
+        }
+    }
+}
+
+@include media-md {
+    .dep-container {
+        .dep-card {
+            margin: 40px 35px;
+            align-items: center;
+            .dep-card-content {
+                width: 50%;
+                left: 20%;
+                padding: 10px 20px 20px 40px;
+            }
+            &:hover {
+                height: 350px;
+                img {
+                    left: 75%;
+                    height: 400px;
+                }
+            }
+        }
+    }
+}
+
+/* --------------- MODAL --------------- */
+
+.dep-modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .8);
+    display: flex;
+    flex-direction: column;
+    --opacity: 0;
+    --pointer: none;
+    opacity: var(--opacity);
+    pointer-events: var(--pointer);
+    transition: opacity .5s;
+    &:target {
+        --opacity: 1;
+        --pointer: unset;
+    }
+    .dep-modal-container {
+        background-color: #fff;
+        max-width: 900px;
+        width: 85%;
+        overflow: hidden;
+        margin: auto;
+        text-align: center;
+        border-radius: 1em;
+        box-shadow: 3px 3px 15px rgba(0, 0, 0, 1);
+        .dep-modal-title {
+            h2 {
+                font-size: 2rem;
+                background-color: #ff6600;
+                color: #fff;
+                padding: 0.2em;
+                text-align: center;
+                border-bottom: 6px solid #2e80d3;
+            }
+        }
+        .dep-modal-info {
+            padding: 2em;
+            .dep-modal-items {
+                h3 {
+                    font-size: 1.5rem;
+                    margin-bottom: 0;
+                    padding: 15px;
+                    border-top: 1px solid black;
+                    text-shadow: 3px 3px 6px rgba(0, 0, 0, .3);
+                }
+                p {
+                    font-size: 1.2rem;
+                    padding: 0 5px 0px 5px;
+                }
+                .dep-p-ult {
+                    border-bottom: 1px solid black;
+                    padding-bottom: 15px;
+                }
+            }
+            .dep-modal-close {
+                display: inline-block;
+                margin-top: 10px;
+                text-decoration: none;
+                font-size: 1rem;
+                padding: .3em .5em;
+                color: $color-white;
+                background-color:$color-secondary;
+                box-shadow: 3px 3px 3px $color-primary;
+                border: none;
+                border-radius: 5px;
+            }
+        }
+    }
+}
