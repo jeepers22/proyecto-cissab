@@ -387,7 +387,7 @@ main {
 .cult-general-grid {
   display: grid;
   grid-template-areas: "main-title" "card-1" "card-2" "card-3" "gallery";
-  gap: 40px;
+  gap: 35px;
 }
 @media (min-width: 768px) {
   .cult-general-grid {

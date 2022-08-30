@@ -9,7 +9,7 @@
     "card-2"
     "card-3"
     "gallery";
-    gap: 40px;
+    gap: 35px;
     @include media-md {
         grid-template-areas:
         "main-title main-title"
