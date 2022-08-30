@@ -400,6 +400,14 @@ main {
     grid-template-areas: "main-title main-title main-title" "card-1     card-2     card-3" "gallery   gallery     gallery";
   }
 }
+.cult-general-grid .card-container .card-info .card-description h4 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+.cult-general-grid .card-container .card-info .card-description p {
+  font-size: 1rem;
+  line-height: 0.9rem;
+}
 
 .cult-main-events-title {
   grid-area: main-title;
@@ -433,6 +441,7 @@ main {
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
+  gap: 20px;
 }
 .cult-gallery-grid .cult-gallery-title {
   width: 100%;
@@ -448,10 +457,9 @@ main {
 @media (min-width: 768px) {
   .cult-gallery-grid {
     grid-template-columns: repeat(2, 300px);
-    gap: 3px 10px;
+    gap: 10px 10px;
     justify-content: center;
-    margin-top: 50px;
-    /* Para que el título de la galería ocupe toda una fila */
+    margin-top: 10px;
   }
   .cult-gallery-grid .cult-gallery-title {
     grid-column: 1/-1;

@@ -24,6 +24,20 @@
         "card-1     card-2     card-3"
         "gallery   gallery     gallery";
     }
+    .card-container {
+        .card-info {
+            .card-description {
+                h4 {
+                        font-size: 1.1rem;
+                        margin-bottom: 1rem;
+                    }
+                p {
+                    font-size: 1rem;
+                    line-height: 0.9rem;
+                }
+            }
+        }
+    }
 }
 
 .cult-main-events-title {
@@ -47,6 +61,7 @@
     display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
+    gap: 20px;
     .cult-gallery-title {
         width: 100%;
         margin: 10px 0 20px;
@@ -57,10 +72,9 @@
     }
     @include media-md {
         grid-template-columns: repeat(2, 300px);
-        gap: 3px 10px;
+        gap: 10px 10px;
         justify-content: center;
-        margin-top: 50px;
-        /* Para que el título de la galería ocupe toda una fila */
+        margin-top: 10px;
         .cult-gallery-title {
             grid-column: 1/-1;
         }
