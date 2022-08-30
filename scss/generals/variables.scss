@@ -26,6 +26,9 @@ $fs-xl-h3: 1.3rem;
 $fs-sm-h4: 1rem;
 $fs-md-h4: 1.1rem;
 $fs-xl-h4: 1.2rem;
+$fs-sm-h5: 0.8rem;
+$fs-md-h5: 0.9rem;
+$fs-xl-h5: 1rem;
 $fs-sm-p: 1rem;
 $fs-md-p: 1.1rem;
 $fs-xl-p: 1.1rem;
@@ -68,6 +71,7 @@ $flexbox-base: (
     --fs-h2: #{$fs-sm-h2};
     --fs-h3: #{$fs-sm-h3};
     --fs-h4: #{$fs-sm-h4};
+    --fs-h5: #{$fs-sm-h5};
     --fs-p: #{$fs-sm-p};
     --lh-p: #{$lh-sm-p};
     @media (min-width:768px) {
@@ -75,6 +79,7 @@ $flexbox-base: (
         --fs-h2: #{$fs-md-h2};
         --fs-h3: #{$fs-md-h3};
         --fs-h4: #{$fs-md-h4};
+        --fs-h5: #{$fs-md-h5};
         --fs-p: #{$fs-md-p};
         --lh-p: #{$lh-md-p};
     }
@@ -83,6 +88,7 @@ $flexbox-base: (
         --fs-h2: #{$fs-xl-h2};
         --fs-h3: #{$fs-xl-h3};
         --fs-h4: #{$fs-xl-h4};
+        --fs-h5: #{$fs-xl-h5};
         --fs-p: #{$fs-xl-p};
         --lh-p: #{$lh-xl-p};
     }

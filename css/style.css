@@ -6,6 +6,7 @@
   --fs-h2: 1.2rem;
   --fs-h3: 1.1rem;
   --fs-h4: 1rem;
+  --fs-h5: 0.8rem;
   --fs-p: 1rem;
   --lh-p: 1.4rem;
 }
@@ -15,6 +16,7 @@
     --fs-h2: 1.3rem;
     --fs-h3: 1.2rem;
     --fs-h4: 1.1rem;
+    --fs-h5: 0.9rem;
     --fs-p: 1.1rem;
     --lh-p: 1.5rem;
   }
@@ -25,6 +27,7 @@
     --fs-h2: 1.4rem;
     --fs-h3: 1.3rem;
     --fs-h4: 1.2rem;
+    --fs-h5: 1rem;
     --fs-p: 1.1rem;
     --lh-p: 1.5rem;
   }
@@ -52,7 +55,7 @@ h1, h2, h3, h4 {
   text-transform: uppercase;
 }
 
-p, footer a img {
+p {
   font-size: var(--fs-p);
   line-height: var(--lh-p);
 }
@@ -83,7 +86,7 @@ p, footer a img {
   font-size: var(--fs-h4);
   font-weight: bold;
 }
-.card-container .card-info .card-description p, .card-container .card-info .card-description footer a img, footer a .card-container .card-info .card-description img {
+.card-container .card-info .card-description p {
   font-size: var(--fs-p);
   line-height: var(--lh-p);
 }
@@ -546,7 +549,7 @@ main {
   line-height: 1.4rem;
 }
 @media (min-width: 768px) {
-  .juv-general-grid .juv-group-grid .juv-group-info-container .juv-group-info p, .juv-general-grid .juv-group-grid .juv-group-info-container .juv-group-info footer a img, footer a .juv-general-grid .juv-group-grid .juv-group-info-container .juv-group-info img {
+  .juv-general-grid .juv-group-grid .juv-group-info-container .juv-group-info p {
     max-width: 620px;
     margin: 0 auto;
   }
@@ -678,7 +681,7 @@ main {
   font-size: 2.2em;
   line-height: 1em;
 }
-.dep-container .dep-card .dep-card-content p, .dep-container .dep-card .dep-card-content footer a img, footer a .dep-container .dep-card .dep-card-content img {
+.dep-container .dep-card .dep-card-content p {
   color: #fff;
 }
 .dep-container .dep-card .dep-card-content a {
@@ -766,7 +769,7 @@ main {
   border-top: 1px solid black;
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
 }
-.dep-modal .dep-modal-container .dep-modal-info .dep-modal-items p, .dep-modal .dep-modal-container .dep-modal-info .dep-modal-items footer a img, footer a .dep-modal .dep-modal-container .dep-modal-info .dep-modal-items img {
+.dep-modal .dep-modal-container .dep-modal-info .dep-modal-items p {
   font-size: 1.2rem;
   padding: 0 5px 0px 5px;
 }
@@ -939,29 +942,66 @@ footer {
 }
 footer .footer-container {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  padding: 30px 50px;
+  margin-top: 40px;
   background-color: #2e80d3;
   color: #FFFFFF;
   text-align: center;
   border-top: 4px solid #ff6600;
-  height: 150px;
-  margin-top: 40px;
 }
+footer .footer-container .footer-info h4, footer .footer-container .footer-redes-sociales h4 {
+  font-size: var(--fs-h4);
+  padding-bottom: 0.4em;
+  margin-bottom: 1em;
+  border-bottom: 1px solid #fff;
+}
+footer .footer-container .footer-info .footer-info-items, footer .footer-container .footer-redes-sociales .footer-info-items {
+  width: 230px;
+  text-align: left;
+  margin: 0 auto;
+}
+footer .footer-container .footer-info .footer-info-items p, footer .footer-container .footer-redes-sociales .footer-info-items p {
+  display: inline-block;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+footer .footer-container .footer-info .footer-info-items img, footer .footer-container .footer-redes-sociales .footer-info-items img {
+  width: 18px;
+  margin-right: 10px;
+}
+footer .footer-container .footer-info .footer-info-items a, footer .footer-container .footer-redes-sociales .footer-info-items a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+footer .footer-container .footer-redes-sociales .footer-redes-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+footer .footer-container .footer-redes-sociales .footer-redes-container img {
+  width: 48px;
+}
+
 @media (min-width: 768px) {
   footer .footer-container {
+    flex-direction: row;
     justify-content: space-evenly;
+    align-items: center;
+  }
+  footer .footer-container .footer-info, footer .footer-container .footer-redes-sociales {
+    width: 280px;
+  }
+  footer .footer-container .footer-redes-sociales h4 {
+    border-bottom: 0;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
   }
 }
-footer .footer-container .footer-info {
-  display: inline-block;
-  font-size: 1rem;
-}
-footer p, footer a img {
-  box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.2);
-}
-footer a img {
-  border-radius: 50%;
+@media (min-width: 992px) {
+  footer .footer-container {
+    padding: 30px 150px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
