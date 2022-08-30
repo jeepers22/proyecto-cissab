@@ -70,6 +70,12 @@
             @include separador-doble($color-secondary, bottom, 5px, $color-primary);
         }
     }
+    .cult-gallery-image {
+        img {
+            width: 300px;
+        }
+    }
+
     @include media-md {
         grid-template-columns: repeat(2, 300px);
         gap: 10px 10px;
@@ -81,6 +87,29 @@
     }
     @include media-xl {
         grid-template-columns: repeat(3, 300px);
+        .cult-gallery-image {
+            img {
+                position: relative;
+                width: 300px;
+                transition: 0.5s ease-out;
+                z-index: 0;
+            }
+            &:nth-of-type(3n - 1) img:hover {
+                transform: scale(1.3);
+                z-index: 999;
+                box-shadow: 3px 3px 15px rgba(0, 0, 0, 1);
+            }
+            &:nth-of-type(3n) img:hover {
+                transform: scale(1.3);
+                z-index: 999;
+                box-shadow: 3px 3px 15px rgba(0, 0, 0, 1);
+            }
+            &:nth-of-type(3n + 1) img:hover {
+                transform: scale(1.3);
+                z-index: 999;
+                box-shadow: 3px 3px 15px rgba(0, 0, 0, 1);
+            }
+        }
     }
 }
 
