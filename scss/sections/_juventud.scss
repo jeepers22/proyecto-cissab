@@ -83,10 +83,58 @@
             }
         }
         .juv-group-info-container {
-            text-align: center;
+            width: 75%;
+            margin: 0 auto;
+            max-width: 550px;
+            .juv-group-cuadro {
+                position: relative;
+                width: 100%;
+                background-color: $color-primary;
+                color: $color-white;
+                box-shadow: 3px 3px 10px rgba(0, 0, 0, 1);
+                margin: 0.5em auto 1.5em;
+                padding: 1em 0;
+                border-radius: 7px;
+                &::before {
+                    content: '';
+                    @include cinta;
+                    transform: rotate(-45deg);
+                    left: -15px;
+                    top: 0;
+                }
+                &::after {
+                    content: '';
+                    @include cinta;
+                    transform: rotate(135deg);
+                    right: -15px;
+                    bottom: 0;
+                }
+                h3 {
+                    font-size: $fs-sm-h3;
+                    text-shadow: 3px 3px 6px rgba(0, 0, 0, .3);
+                }
+                p {
+                    font-size: $fs-sm-p;
+                    margin-bottom: 0;
+                    text-align: center;
+                }
+            }
             .juv-group-info {
-                padding: .5rem;
-                line-height: 1.4rem;
+                width: 100%;
+                margin: 0 auto;
+                line-height: $lh-sm-p;
+                text-align: center;
+                border-bottom: 1px solid #000;
+                h3 {
+                    font-size: $fs-sm-h3;
+                    text-shadow: 3px 3px 6px rgba(0, 0, 0, .3);
+                    margin-top: 0.5em;
+                    // border-bottom: 1px solid #000;
+                }
+                p {
+                    font-size: $fs-sm-p;
+                    margin-bottom: 0.5em;
+                }
                 @include media-md {
                     p {
                         max-width: 620px;
@@ -133,12 +181,8 @@
             }
             .juv-group-info-container {
                 grid-area: group-info;
-                align-self: center;
-                justify-self: center;
-                text-align: left;
-                .juv-group-info {
-                    margin-left: 15px;
-                }
+                width: 80%;
+                margin: auto;
             }
             .juv-group-gallery-grid {
                 grid-area: group-gallery;

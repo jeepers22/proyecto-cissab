@@ -576,11 +576,66 @@ main {
   border-bottom: 5px solid #2e80d3;
 }
 .juv-general-grid .juv-group-grid .juv-group-info-container {
+  width: 75%;
+  margin: 0 auto;
+  max-width: 550px;
+}
+.juv-general-grid .juv-group-grid .juv-group-info-container .juv-group-cuadro {
+  position: relative;
+  width: 100%;
+  background-color: #2e80d3;
+  color: #FFFFFF;
+  box-shadow: 3px 3px 10px rgb(0, 0, 0);
+  margin: 0.5em auto 1.5em;
+  padding: 1em 0;
+  border-radius: 7px;
+}
+.juv-general-grid .juv-group-grid .juv-group-info-container .juv-group-cuadro::before {
+  content: "";
+  position: absolute;
+  width: 45px;
+  height: 15px;
+  background-color: rgb(255, 254, 199);
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+  transform: rotate(-45deg);
+  left: -15px;
+  top: 0;
+}
+.juv-general-grid .juv-group-grid .juv-group-info-container .juv-group-cuadro::after {
+  content: "";
+  position: absolute;
+  width: 45px;
+  height: 15px;
+  background-color: rgb(255, 254, 199);
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+  transform: rotate(135deg);
+  right: -15px;
+  bottom: 0;
+}
+.juv-general-grid .juv-group-grid .juv-group-info-container .juv-group-cuadro h3 {
+  font-size: 1.1rem;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+}
+.juv-general-grid .juv-group-grid .juv-group-info-container .juv-group-cuadro p {
+  font-size: 1rem;
+  margin-bottom: 0;
   text-align: center;
 }
 .juv-general-grid .juv-group-grid .juv-group-info-container .juv-group-info {
-  padding: 0.5rem;
+  width: 100%;
+  margin: 0 auto;
   line-height: 1.4rem;
+  text-align: center;
+  border-bottom: 1px solid #000;
+}
+.juv-general-grid .juv-group-grid .juv-group-info-container .juv-group-info h3 {
+  font-size: 1.1rem;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+  margin-top: 0.5em;
+}
+.juv-general-grid .juv-group-grid .juv-group-info-container .juv-group-info p {
+  font-size: 1rem;
+  margin-bottom: 0.5em;
 }
 @media (min-width: 768px) {
   .juv-general-grid .juv-group-grid .juv-group-info-container .juv-group-info p {
@@ -624,12 +679,8 @@ main {
   }
   .juv-general-grid .juv-group-grid .juv-group-info-container {
     grid-area: group-info;
-    align-self: center;
-    justify-self: center;
-    text-align: left;
-  }
-  .juv-general-grid .juv-group-grid .juv-group-info-container .juv-group-info {
-    margin-left: 15px;
+    width: 80%;
+    margin: auto;
   }
   .juv-general-grid .juv-group-grid .juv-group-gallery-grid {
     grid-area: group-gallery;

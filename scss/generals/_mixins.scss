@@ -55,3 +55,21 @@
     font-size: $set-fs-p;
     line-height: $set-lh-p;
 }
+
+// EFECTO IMG GALERÍA
+
+@mixin gallery-effect {
+    transform: scale(1.3);
+    z-index: 999;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 1);
+}
+
+// FIGURA CINTA SCOTCH GALERÍA
+
+@mixin cinta {
+    position: absolute;
+    width: 45px;
+    height: 15px;
+    background-color: rgb(255, 254, 199);
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, .5);
+}
