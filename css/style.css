@@ -439,6 +439,15 @@ main {
     grid-template-areas: "main-title main-title main-title" "card-1     card-2     card-3" "gallery   gallery     gallery";
   }
 }
+.cult-general-grid .card-container .card-img {
+  width: 280px;
+}
+.cult-general-grid .card-container .card-img img {
+  width: 100%;
+}
+.cult-general-grid .card-container .card-info {
+  width: 280px;
+}
 .cult-general-grid .card-container .card-info .card-description h4 {
   font-size: 1.1rem;
   margin-bottom: 1rem;
@@ -446,6 +455,14 @@ main {
 .cult-general-grid .card-container .card-info .card-description p {
   font-size: 1rem;
   line-height: 0.9rem;
+}
+@media (min-width: 350px) {
+  .cult-general-grid .card-container .card-img {
+    width: 350px;
+  }
+  .cult-general-grid .card-container .card-info {
+    width: 350px;
+  }
 }
 
 .cult-main-events-title {
