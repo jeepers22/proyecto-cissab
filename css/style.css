@@ -171,6 +171,7 @@ header nav .barra-superior-nav .nav-margin ul li a {
   grid-template-areas: "welcome-title" "slider" "main";
   justify-items: center;
   gap: 30px;
+  overflow-x: hidden;
 }
 
 .welcome-title {
