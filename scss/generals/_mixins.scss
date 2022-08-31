@@ -23,8 +23,6 @@
     width: map-get($flexbox-base, width-percent);
 }
 
-// ! Se que card-img y card-info repiten código y podría hacer un único mixin, sólo lo hago así porque quiero hacer un componente reutilizable, en caso que en otro proyecto tenga distinta medida de img y de caja de info
-
 @mixin card-img {
     width: $w-card;
 }

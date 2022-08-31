@@ -82,7 +82,7 @@ main {
     "card-container-3"
     "card-container-4";
     gap: 40px;
-    grid-template-columns: 100%; /* Para que el título del grid ocupe todo el ancho */
+    grid-template-columns: 100%;
     @include media-md {
         gap: 25px;
         margin-top: 10px;
