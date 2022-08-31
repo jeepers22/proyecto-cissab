@@ -6,8 +6,15 @@ header {
         background-color: $color-grey;
         .logo {
             margin-left: 10%;
+            width: 150px;
+            @media(min-width:350px) {
+                width: 170px;
+            }
+            @include media-md {
+                width: 200px;
+            }
             img {
-                width: 85%;
+                width: 100%;
                 @include media-md {
                     width: 100%;
                 }

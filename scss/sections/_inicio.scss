@@ -98,7 +98,18 @@ main {
     }
 }
 
-// TODO: mejorar, esto
+@media(min-width:350px) {
+    @for $i from 1 through 4 {
+        .card-container-#{$i} {
+            .card-img {
+                width: 350px;
+            }
+            .card-info {
+                width: 350px;
+            }
+        }
+    }
+}
 
 @include media-md {
     // ZigZag Horizontal CARDS

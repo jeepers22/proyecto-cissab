@@ -66,10 +66,10 @@ p {
   width: 100%;
 }
 .card-container .card-img {
-  width: 350px;
+  width: 280px;
 }
 .card-container .card-info {
-  width: 350px;
+  width: 280px;
 }
 .card-container .card-info h3 {
   background-color: #ff6600;
@@ -78,7 +78,7 @@ p {
   text-align: center;
 }
 .card-container .card-info .card-description {
-  width: calc(350px - 5%);
+  width: calc(280px - 5%);
   margin: 0 auto;
   margin-top: 1.3rem;
 }
@@ -100,9 +100,20 @@ header nav {
 }
 header nav .logo {
   margin-left: 10%;
+  width: 150px;
+}
+@media (min-width: 350px) {
+  header nav .logo {
+    width: 170px;
+  }
+}
+@media (min-width: 768px) {
+  header nav .logo {
+    width: 200px;
+  }
 }
 header nav .logo img {
-  width: 85%;
+  width: 100%;
 }
 @media (min-width: 768px) {
   header nav .logo img {
@@ -248,13 +259,39 @@ main {
   }
 }
 
+@media (min-width: 350px) {
+  .card-container-1 .card-img {
+    width: 350px;
+  }
+  .card-container-1 .card-info {
+    width: 350px;
+  }
+  .card-container-2 .card-img {
+    width: 350px;
+  }
+  .card-container-2 .card-info {
+    width: 350px;
+  }
+  .card-container-3 .card-img {
+    width: 350px;
+  }
+  .card-container-3 .card-info {
+    width: 350px;
+  }
+  .card-container-4 .card-img {
+    width: 350px;
+  }
+  .card-container-4 .card-info {
+    width: 350px;
+  }
+}
 @media (min-width: 768px) {
   .card-container-1 {
     grid-area: card-container-1;
     flex-direction: row;
   }
   .card-container-1 .card-info .card-description {
-    width: calc(350px - 20%);
+    width: calc(280px - 20%);
     margin-top: 5rem;
   }
   .card-container-2 {
@@ -262,7 +299,7 @@ main {
     flex-direction: row-reverse;
   }
   .card-container-2 .card-info .card-description {
-    width: calc(350px - 20%);
+    width: calc(280px - 20%);
     margin-top: 5rem;
   }
   .card-container-3 {
@@ -270,7 +307,7 @@ main {
     flex-direction: row;
   }
   .card-container-3 .card-info .card-description {
-    width: calc(350px - 20%);
+    width: calc(280px - 20%);
     margin-top: 5rem;
   }
   .card-container-4 {
@@ -278,7 +315,7 @@ main {
     flex-direction: row-reverse;
   }
   .card-container-4 .card-info .card-description {
-    width: calc(350px - 20%);
+    width: calc(280px - 20%);
     margin-top: 5rem;
   }
 }
